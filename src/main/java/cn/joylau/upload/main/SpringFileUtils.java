@@ -22,7 +22,7 @@ import java.util.List;
 public class SpringFileUtils {
 
     //文件上传相关代码
-    public String upload(@RequestParam("test") MultipartFile file) {
+    public String upload(@RequestParam("file") MultipartFile file) {
         if (file.isEmpty()) {
             return "文件为空";
         }
