@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<h1 style="text-align:center;">资源上传界面</h1>
+<h1 style="text-align:center;">资源上传</h1>
 <div id="up-div" class="up-div"></div>
 </body>
 </html>
