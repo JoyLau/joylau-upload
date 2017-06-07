@@ -6,6 +6,8 @@ import com.qiniu.storage.Configuration;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.storage.model.FileInfo;
 import com.qiniu.util.Auth;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,9 +27,9 @@ import java.io.IOException;
 @ConfigurationProperties(prefix = "qiniu")
 public class FileUploadController {
 
-    private String accessKey;
-    private String secretKey;
-    private String bucket;
+    @Setter @Getter private String accessKey;
+    @Setter @Getter private String secretKey;
+    @Setter @Getter private String bucket;
     private Auth auth;
     private Configuration cfg;
 
@@ -77,41 +79,4 @@ public class FileUploadController {
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public String getAccessKey() {
-        return accessKey;
-    }
-
-    public void setAccessKey(String accessKey) {
-        this.accessKey = accessKey;
-    }
-
-    public String getSecretKey() {
-        return secretKey;
-    }
-
-    public void setSecretKey(String secretKey) {
-        this.secretKey = secretKey;
-    }
-
-    public String getBucket() {
-        return bucket;
-    }
-
-    public void setBucket(String bucket) {
-        this.bucket = bucket;
-    }
 }
