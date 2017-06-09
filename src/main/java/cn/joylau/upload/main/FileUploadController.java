@@ -31,7 +31,7 @@ import java.util.List;
  * 2587038142@qq.com
  */
 @Controller
-@RequestMapping("/upload")
+@RequestMapping("/")
 public class FileUploadController {
 
     @Value("${qiniu.bucket}")

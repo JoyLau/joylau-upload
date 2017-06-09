@@ -1,6 +1,5 @@
+<#assign path=request.contextPath />
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
@@ -32,9 +31,10 @@
 
 <script type="text/javascript">
 
+    var path = '${path}';
     $(document).ready(function () {
         $("#jqGrid").jqGrid({
-            url: 'getFileDate',
+            url: path + '/getFileDate',
             mtype: "GET",
             datatype: "json",
             colModel: [
