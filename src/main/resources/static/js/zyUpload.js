@@ -68,7 +68,7 @@
 		            html += '				<div id="status_info" class="info">选中0张文件，共0B。</div>';
 		            html += '				<div class="btns">';
 		            html += '					<div class="webuploader_pick">继续选择</div>';
-                    html += '					<div class="explorer_btn"><a href="/upload/explorer" target="_blank">资源管理器</a></div>';
+                    html += '					<div class="explorer_btn"><a href="'+path+'/explorer" target="_blank">资源管理器</a></div>';
                     html += '					<div class="upload_btn">开始上传</div>';
 		            html += '				</div>';
 		            html += '			</div>';

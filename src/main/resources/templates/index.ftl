@@ -1,3 +1,4 @@
+<#assign path=request.contextPath />
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,12 +7,12 @@
     <meta name="renderer" content="webkit">
     <title>JoyLau-Upload</title>
     <!-- 引用控制层插件样式 -->
-    <link rel="stylesheet" href="../static/css/zyUpload.css" type="text/css">
+    <link rel="stylesheet" href="${path}/static/css/zyUpload.css" type="text/css">
     <script src="//cdn.bootcss.com/jquery/1.7.2/jquery.min.js"></script>
     <!-- 引用核心层插件 -->
-    <script type="text/javascript" src="../static/js/zyFile.js"></script>
+    <script type="text/javascript" src="${path}/static/js/zyFile.js"></script>
     <!-- 引用控制层插件 -->
-    <script type="text/javascript" src="../static/js/zyUpload.js"></script>
+    <script type="text/javascript" src="${path}/static/js/zyUpload.js"></script>
 </head>
 
 <body>
@@ -20,6 +21,7 @@
 </body>
 </html>
 <script>
+    var path = '${path}';
     $(function(){
         // 初始化插件
         $("#up-div").zyUpload({
@@ -27,7 +29,7 @@
             height           :   "450px",                 // 宽度
             itemWidth        :   "120px",                 // 文件项的宽度
             itemHeight       :   "100px",                 // 文件项的高度
-            url              :   "/upload/uploadFile",  // 上传文件的路径
+            url              :   path + "/uploadFile",  // 上传文件的路径
             multiple         :   true,                    // 是否可以多个文件上传
             dragDrop         :   true,                    // 是否可以拖动上传文件
             del              :   true,                    // 是否可以删除文件
